@@ -14,7 +14,7 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/user', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -22,4 +22,8 @@ Route::get('/greeting', function () {
     return 'Hello World';
 });
 
-Route::get('/', [TestController::class, 'index']);
+Route::get('/index', [TestController::class, 'index']);
+
+// From Controller
+Route::get('form', [App\Http\Controllers\FormController::class , "form"]);
+Route::post('store_data', [App\Http\Controllers\FormController::class , "store_data"]);
