@@ -19,13 +19,14 @@
     </center>
     <div class="container">
         <form action="store_data" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
             </div>
             <div class="mb-3">
                 <label for="profilePicture" class="form-label">Porfile Picture</label>
-                <input type="file" class="form-control" id="profilePicture" placeholder="Another input placeholder">
+                <input name="profilePicture" type="file" class="form-control" id="profilePicture">
             </div>
             {{-- Checkbox --}}
             <br>
