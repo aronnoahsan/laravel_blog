@@ -31,4 +31,9 @@ class FormController extends Controller
         $data->save();
         return back();
     }
+    function show()
+    {
+        $data = Form::all();
+        return view('show', compact('data'));
+    }
 }

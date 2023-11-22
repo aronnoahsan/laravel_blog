@@ -25,5 +25,6 @@ Route::get('/greeting', function () {
 Route::get('/index', [TestController::class, 'index']);
 
 // From Controller
-Route::get('form', [App\Http\Controllers\FormController::class , "form"]);
-Route::post('store_data', [App\Http\Controllers\FormController::class , "store_data"]);
+Route::get('form', [App\Http\Controllers\FormController::class, "form"]);
+Route::post('store_data', [App\Http\Controllers\FormController::class, "store_data"]);
+Route::get('show', [App\Http\Controllers\FormController::class, "show"]);
